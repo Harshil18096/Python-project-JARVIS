@@ -69,17 +69,17 @@ def takeCommand():
             say("Some Error Occurred,Sorry from Jarvis")
             #return "Some Error Occurred. Sorry from Jarvis"
         
-def writemode():
-    query = input("\nyou :")
-    return query
+# def writemode():
+#     query = input("\nyou :")
+#     return query
 
-def keyboardInput():
-    print("Enter a prompt (type 'exit' to quit):")
-    while True:
-        query = input("You: ")
-        if query.lower() == 'exit':
-            break
-        ai(query)
+# def keyboardInput():
+#     print("Enter a prompt (type 'exit' to quit):")
+#     while True:
+#         query = input("You: ")
+#         if query.lower() == 'exit':
+#             break
+#         ai(query)
 
 if __name__ == '__main__':
     print("Hello I am JARVIS A. I.")
@@ -87,18 +87,6 @@ if __name__ == '__main__':
     while True:
         print("\nListening...")
         query = takeCommand()
-
-        # if "Switch to writing mode".lower() in query.lower():
-        #     say("Switched to writing Mode!")
-
-        #     while 1:
-        #         query = writemode()
-
-        #         if "stop".lower() in query.lower():
-        #             say("GOODBYE...")
-        #             exit()
-        #         else:
-        #             continue
 
         if "play" in query:
             song = query.replace('play', '')
@@ -135,9 +123,6 @@ if __name__ == '__main__':
         elif "reset chat".lower() in query.lower():
             chatStr = ""
             say("NOW CHAT IS CLEAR...")
-
-        elif "write mode" in query.lower():
-            keyboardInput()
 
         else:
             print("Chatting...")
